@@ -1,0 +1,94 @@
+export type AreaId =
+  | "akwa"
+  | "bonanjo"
+  | "port"
+  | "bonapriso"
+  | "deido"
+  | "newbell"
+  | "bonaberi";
+
+export type Area = {
+  id: AreaId;
+  name: string;
+  subtitle: string;
+  lat: number;
+  lon: number;
+  width: number;
+  depth: number;
+  view: { x: number; y: number; z: number; az: number; el: number };
+};
+
+export const AREAS: Record<AreaId, Area> = {
+  akwa: {
+    id: "akwa",
+    name: "Akwa",
+    subtitle: "Boulevard de la Liberte",
+    lat: 4.0509,
+    lon: 9.7074,
+    width: 3200,
+    depth: 2800,
+    view: { x: 80, y: 220, z: 520, az: 0.4, el: 0.55 },
+  },
+  bonanjo: {
+    id: "bonanjo",
+    name: "Bonanjo",
+    subtitle: "Quartier administratif",
+    lat: 4.0432,
+    lon: 9.6908,
+    width: 3000,
+    depth: 2600,
+    view: { x: -40, y: 180, z: 460, az: -0.3, el: 0.5 },
+  },
+  port: {
+    id: "port",
+    name: "Port",
+    subtitle: "Port autonome & Wouri",
+    lat: 4.0518,
+    lon: 9.6842,
+    width: 3400,
+    depth: 2800,
+    view: { x: 120, y: 240, z: 580, az: 0.8, el: 0.48 },
+  },
+  bonapriso: {
+    id: "bonapriso",
+    name: "Bonapriso",
+    subtitle: "Avenues & residences",
+    lat: 4.0278,
+    lon: 9.7026,
+    width: 3000,
+    depth: 2600,
+    view: { x: 40, y: 200, z: 500, az: 0.2, el: 0.52 },
+  },
+  deido: {
+    id: "deido",
+    name: "Deido",
+    subtitle: "Rive nord",
+    lat: 4.0684,
+    lon: 9.7188,
+    width: 3000,
+    depth: 2600,
+    view: { x: 60, y: 190, z: 480, az: -0.5, el: 0.5 },
+  },
+  newbell: {
+    id: "newbell",
+    name: "New Bell",
+    subtitle: "Marches & densite",
+    lat: 4.0438,
+    lon: 9.7215,
+    width: 2800,
+    depth: 2400,
+    view: { x: 20, y: 170, z: 440, az: 0.15, el: 0.58 },
+  },
+  bonaberi: {
+    id: "bonaberi",
+    name: "Bonaberi",
+    subtitle: "Rive gauche du Wouri",
+    lat: 4.0816,
+    lon: 9.6664,
+    width: 3200,
+    depth: 2800,
+    view: { x: -80, y: 230, z: 560, az: 1.1, el: 0.46 },
+  },
+};
+
+export const AREA_LIST = Object.values(AREAS);

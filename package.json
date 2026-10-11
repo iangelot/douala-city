@@ -1,0 +1,32 @@
+{
+  "name": "douala-city",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A real-time 3D Douala in the browser, compiled from OpenStreetMap with procedural equatorial detail",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "fetch": "node tools/pipeline/fetch.mjs",
+    "compile": "node tools/pipeline/compile.mjs",
+    "fetch:all": "node tools/pipeline/all.mjs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "earcut": "^3.0.1",
+    "lil-gui": "^0.20.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.176.0"
+  },
+  "devDependencies": {
+    "@types/earcut": "^3.0.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@types/three": "^0.176.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3"
+  }
+}
